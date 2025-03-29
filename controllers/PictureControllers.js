@@ -3,7 +3,7 @@ const Picture = require("../models/Picture");
 const fs = require("fs");
 
 exports.create = async (req, res) => {
-    res.json("Ok!");
+    
 
     try {
         const { name } = req.body;
@@ -19,7 +19,7 @@ exports.create = async (req, res) => {
 
         res.json({ picture, msg: "Imagem salva com sucesso!"});
         
-    } cath (error) {
+    } cath (err) {
         res.status(500).json({ message: "Erro ao salvar!"});
         
     }
